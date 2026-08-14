@@ -1,0 +1,836 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=M+PLUS+1:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+.banner img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+
+/* =========================
+   CENTER -- LOCATION 
+========================= */
+.info-section {
+    background-color: #f4f3eea9;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 100px 8vw;
+}
+
+
+
+.location-box {
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: black;
+}
+
+.location-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* LOCATION HEADING */
+
+.location-content h2 {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 60px;
+    line-height: 0.95;
+    font-weight: 400;
+
+    margin: 0 0 30px 0;
+
+    color: black;
+}
+
+
+/* GOOGLE MAP */
+
+.location-content iframe {
+    width: 100%;
+    height: 360px;
+
+    border: 1px solid white !important;
+    border-radius: 20px;
+
+    display: block;
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .info-section {
+        padding: 70px 20px;
+
+        gap: 50px;
+    }
+
+
+    .location-content h2 {
+        font-size: 40px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .location-content iframe {
+        height: 300px;
+
+        border-radius: 15px;
+    }
+
+}
+/*------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+------------------------------------------------------------*/
+/* =========================
+   MENUS PAGE
+========================= */
+
+.menus-page {
+    width: 100%;
+    background: #1a4d6f;
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* =========================
+   MENU SECTIONS
+========================= */
+
+.menu-category {
+    width: 85%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+
+/* =========================
+   SECTION TITLES
+========================= */
+
+.menu-category-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.menu-category-header h1 {
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(55px, 8vw, 85px);
+    font-weight: 600;
+
+    line-height: 0.9;
+    letter-spacing: -4px;
+
+    color: #ffffff;
+}
+
+.menu-wave {
+    margin-top: 25px;
+
+    font-size: 45px;
+    font-weight: 700;
+
+    line-height: 0.4;
+    letter-spacing: -10px;
+}
+
+
+/* =========================
+   GENERAL MENU BOX
+========================= */
+
+.menu-box {
+    position: relative;
+
+    border: 2px solid #E6CCC2;
+    border-radius: 20px;
+
+    background: white;
+    color: #e94505;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   BOX CONTENT
+========================= */
+
+.menu-box-content {
+    padding: 25px;
+}
+
+.box-small-title {
+    display: block;
+
+    margin-bottom: 30px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.menu-box h2 {
+    margin: 0 0 30px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: clamp(35px, 4vw, 65px);
+    font-weight: 800;
+
+    line-height: 0.95;
+    letter-spacing: -2px;
+}
+
+
+/* =========================
+   MENU LIST
+========================= */
+
+.menu-list {
+    width: 100%;
+    margin-top: 25px;
+}
+
+
+/* CATEGORY HEADING */
+
+.menu-list-heading {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+
+    border-bottom: 1px solid #e94505;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   MENU ITEM
+========================= */
+
+.menu-item {
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    gap: 20px;
+
+    padding: 9px 0;
+
+    border-bottom: 1px solid rgba(233, 69, 5, 0.25);
+
+    font-size: 15px;
+    font-weight: 500;
+
+    line-height: 1.3;
+}
+
+
+/* PRODUCT */
+
+.menu-item span:first-child {
+    text-align: left;
+}
+
+
+/* PRICE */
+
+.menu-item span:last-child {
+    text-align: right;
+
+    white-space: nowrap;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   DRINKS LAYOUT
+========================= */
+
+.drinks-layout {
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 25px;
+
+    align-items: start;
+}
+
+
+/* LEFT — COFFEES */
+
+.coffees-box {
+    min-height: 650px;
+}
+
+/* =========================
+   LEFT DRINKS COLUMN
+========================= */
+
+.drinks-left {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* =========================
+   CANNED DRINKS BOX
+========================= */
+
+.canned-drinks-box {
+    width: 100%;
+}
+
+
+/* RIGHT */
+
+.drinks-right {
+    display: grid;
+
+    grid-template-rows: auto auto;
+
+    gap: 25px;
+}
+
+
+/* NOT COFFEE */
+
+.not-coffee-box {
+    min-height: 300px;
+}
+
+
+/* ADD ONS */
+
+.add-ons-box {
+    min-height: 300px;
+}
+
+
+/* =========================
+   FOOD MENU
+========================= */
+
+.food-menu {
+    border-top: 1px solid #e94505;
+}
+
+
+/* MAIN FOOD LAYOUT */
+
+.food-layout {
+    display: grid;
+
+    grid-template-columns: 1.15fr 0.85fr;
+
+    gap: 25px;
+
+    align-items: start;
+}
+
+
+/* =========================
+   LEFT FOOD COLUMN
+========================= */
+
+.food-left {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+
+/* =========================
+   TOASTIES + ACAI
+========================= */
+
+/* ---------- TOASTIES ---------- */
+
+.toasties-box {
+    width: 100%;
+}
+
+.toastie-item {
+    padding: 18px 0;
+    border-top: 1px solid #e94505;
+}
+
+.toastie-item:last-of-type {
+    border-bottom: 1px solid #e94505;
+}
+
+.toastie-name {
+    margin-bottom: 7px;
+
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.toastie-description {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* ---------- ACAI BOWLS ---------- */
+
+.acai-box {
+    width: 100%;
+}
+
+.acai-name{
+    margin-bottom: 7px;
+
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.acai-item {
+    padding: 18px 0;
+    border-top: 1px solid #e94505;
+}
+
+/* Remove the dropdown behaviour */
+.acai-item summary {
+    display: block;
+    padding: 0;
+
+    list-style: none;
+    cursor: default;
+
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+/* Hide browser arrow */
+.acai-item summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Hide your ↓ button */
+.dropdown-arrow {
+    display: none;
+}
+
+/* Always show description */
+.acai-description {
+    display: block;
+
+    padding: 8px 0 0;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Last Acai item */
+.acai-item:last-of-type {
+    border-bottom: 1px solid #e94505;
+}
+
+
+/* ---------- ACAI PRICES ---------- */
+
+.acai-price {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 5px;
+
+    font-size: 15px;
+    text-transform: uppercase;
+    padding-top: 25px;
+
+    border-top: 1px solid #e94505;
+}
+
+.acai-price strong {
+    font-size: 17px;
+    margin-right: 15px;
+}
+
+
+/* =========================
+   FOOD RIGHT COLUMN
+========================= */
+
+.food-right {
+    display: grid;
+
+    grid-template-rows: auto auto auto;
+
+    gap: 25px;
+}
+
+
+/* SMALL FOOD BOXES */
+
+.food-small-box {
+    min-height: auto;
+}
+
+
+/* =========================
+   NOTES
+========================= */
+
+.menu-note {
+    margin-top: 30px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #e94505;
+
+    font-size: 13px;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .menu-category {
+        width: 90%;
+        max-width: 650px;
+
+        padding: 75px 0;
+    }
+
+
+    /* DRINKS */
+
+    .drinks-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .coffees-box {
+        min-height: auto;
+    }
+
+    .drinks-right {
+        grid-template-rows: auto;
+    }
+
+
+    /* FOOD */
+
+    .food-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .toasties-box {
+        min-height: auto;
+    }
+
+    .food-right {
+        grid-template-rows: auto;
+    }
+
+    .food-small-box {
+        min-height: auto;
+    }
+
+}
+
+
+/* =========================
+   PHONE
+========================= */
+
+@media (max-width: 600px) {
+
+    .menu-category {
+        width: 88%;
+        padding: 60px 0;
+    }
+
+
+    .menu-category-header {
+        margin-bottom: 40px;
+    }
+
+
+    .menu-category-header h1 {
+        font-size: 50px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .menu-wave {
+        font-size: 35px;
+    }
+
+
+    .menu-box-content {
+        padding: 25px;
+    }
+
+
+    .menu-box h2 {
+        font-size: 38px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .box-small-title {
+        margin-bottom: 25px;
+    }
+
+
+    .menu-item {
+        grid-template-columns: 1fr auto;
+
+        gap: 10px;
+
+        font-size: 13px;
+    }
+
+
+    .menu-list-heading {
+        font-size: 11px;
+    }
+
+
+    .drinks-layout,
+    .food-layout {
+        gap: 15px;
+    }
+
+
+    .drinks-right,
+    .food-right {
+        gap: 15px;
+    }
+
+
+    /* ACAI */
+
+    .acai-price {
+        grid-template-columns: auto auto;
+
+        gap: 8px 15px;
+    }
+
+
+    .acai-item summary {
+        font-size: 14px;
+    }
+
+
+    .acai-description {
+        font-size: 13px;
+    }
+
+}
+
+
+/* LOCATION */
+.location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* Centers the heading and iframe horizontally */
+    text-align: center;    /* Centers the heading text */
+    padding: 40px 20px;
+}
+.location-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  padding-left: 4px;
+  font-weight: 40;
+  font-style: normal;
+  margin-bottom: 20px;
+}
+
+.location iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+
+    border-radius: 20px;
+    border: 4px solid #6f4e37;
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+.location iframe:hover {
+    transform: translateY(-10px); /* Moves the map up */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Bigger shadow */
+}
+
+@media (max-width: 480px) {
+
+    .location {
+        padding: 20px 10px;
+    }
+
+    .location-title {
+        font-size: 18px;
+    }
+
+    .location iframe {
+        height: 300px;
+    }
+
+    h2 {
+        font-size: 32px;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .opening-hours {
+        width: 95%;
+        padding: 20px;
+    }
+
+}
+
+
+
+.coffee {
+    background-color:#fbf8ddb2;
+    color:#341d12;
+    width: 100%;
+    min-height: 100vh;
+    padding: 80px 0;
+}
+
+.coffee-text {
+    max-width: 550px;
+}
+
+.coffee h1 {
+    font-family: "Montserrat", sans-serif;
+    color: #ffc548;
+    font-size:80px;
+    line-height:.8;
+    font-weight:400;
+
+    margin-bottom: 30px;
+}
+
+.coffee-description {
+    font-family: "Montserrat", sans-serif;
+    max-width: 450px;
+
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* IMAGE */
+
+.coffee-image {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+}
+
+.coffee-image img {
+    width: 100%;
+    height: 100%;
+    border: solid 2px #ffffff;
+    object-fit: contain;
+    border-radius: 5px;
+    display: block;
+}
+
+
+
+/* PHONE */
+@media (max-width: 767px) {
+    .coffee-image {
+        margin-top: 40px;
+    }
+
+    .coffee-image img {
+        height: 400px;
+    }
+
+    .coffee h1 {
+        font-size: 55px;
+    }
+}
+
+
+.coffee-here-button {
+    margin: 40px 0 0;
+    display:flex;
+    width: fit-content;
+
+    padding: 15px 42px;
+
+    border: 1px solid #ffc548;
+    border-radius: 15px;
+
+    font-size: 13px;
+    letter-spacing: 2px;
+
+    transition: 0.3s ease;
+}
+
+
+
+.coffee-here-button:hover {
+
+    background: #ffc548;
+
+    color: #ffffff;
+
+}
+

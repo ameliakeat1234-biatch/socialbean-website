@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Bean Coffee</title>
+    
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/format-styles.css">
+</head>
+
+<!-- Header Carousel -->
+
+<body>
+
+    <!-- Navigation -->
+     
+<nav class="navbar">
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    <h1 class="nav-logo">Social Bean</h1>
+
+    <ul class="nav-links" id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="beans.html">Our Beans</a></li>
+        <li><a href="#giftcards">Gift Cards</a></li>
+
+        <!-- Mobile only -->
+        <li class="mobile-find">
+            <a href="findus.html" class="find-btn">Find Us</a>
+        </li>
+    </ul>
+
+
+    <!-- Desktop only -->
+    <a href="findus.html" class="find-btn desktop-find">Find Us</a>
+</nav>
+
+
+<!-- =========================
+     LOCATION + HOURS
+========================= -->
+
+<section class="info-section">
+
+    <!-- LEFT — LOCATION -->
+    <div class="location-box">
+
+        <div class="location-content">
+            <h2>Find our Location</h2>
+
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54708374.483432606!2d-92.37427924480475!3d33.18435026261258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4867116e66f8d125%3A0xec80ce15a439bc5c!2sSocial%20Bean%20Limited!5e0!3m2!1sen!2sie!4v1784375020096!5m2!1sen!2sie"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+
+<!-- =========================
+     FOLLOW ALONG
+========================= 
+
+<section class="follow-along-section">
+
+    <div class="follow-content">
+
+        <h2>Follow Along</h2>
+
+        <p class="follow-subtitle">
+            Come hang out with us online.
+        </p> 
+
+         FEATURED IMAGE
+        <div class="follow-image">
+            <img src="images/founders.jpg" alt="Social Bean Coffee">
+        </div>
+
+        SOCIAL LINKS 
+        <div class="social-links">
+
+            <a href="#" aria-label="Instagram">
+                <img src="images/instagram_logo.png" alt="Instagram">
+            </a>
+
+            <a href="#" aria-label="Facebook">
+                <img src="images/facebook_logo.png" alt="Facebook">
+            </a>
+
+            <a href="#" aria-label="TikTok">
+                <img src="images/tiktok_logo.png" alt="TikTok">
+            </a>
+
+        </div>
+
+    </div>
+
+</section> -->
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <!-- =========================
+             LEFT — SITE LINKS
+        ========================= -->
+
+        <div class="footer-links">
+
+            <h2>Explore Our Site</h2>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="beans.html">Our Beans</a></li>
+                <li><a href="#giftcards">Gift Cards</a></li>
+                <li><a href="findus.html">Find Us</a></li>
+            </ul>
+
+        </div>
+
+
+        <!-- =========================
+             CENTER — SOCIAL BEAN
+        ========================= -->
+
+        <div class="footer-center">
+
+            <h1>Social Bean</h1>
+
+            <div class="footer-social-links">
+
+                <a href="#" aria-label="Instagram">
+                    <img src="images/instagram_logo.png" alt="Instagram">
+                </a>
+
+                <a href="#" aria-label="Facebook">
+                    <img src="images/facebook_logo.png" alt="Facebook">
+                </a>
+
+                <a href="#" aria-label="TikTok">
+                    <img src="images/tiktok_logo.png" alt="TikTok">
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             RIGHT — BUSINESS HOURS
+        ========================= -->
+
+        <div class="footer-hours">
+
+            <h2>Business Hours</h2>
+
+            <div class="footer-hours-list">
+
+                <div>
+                    <span>Monday</span>
+                    <span>7:30 AM - 3:00 PM</span>
+                </div>
+
+                <div>
+                    <span>Tuesday</span>
+                    <span>7:30 AM - 3:00 PM</span>
+                </div>
+
+                <div>
+                    <span>Wednesday</span>
+                    <span>7:30 AM - 3:00 PM</span>
+                </div>
+
+                <div>
+                    <span>Thursday</span>
+                    <span>7:30 AM - 3:00 PM</span>
+                </div>
+
+                <div>
+                    <span>Friday</span>
+                    <span>7:30 AM - 3:00 PM</span>
+                </div>
+
+                <div>
+                    <span>Saturday</span>
+                    <span>8:30 AM - 3:30 PM</span>
+                </div>
+
+                <div>
+                    <span>Sunday</span>
+                    <span>8:30 AM - 3:30 PM</span>
+                </div>
+
+            </div>
+
+            <!-- Your existing JavaScript uses this ID -->
+            <p id="footer-status"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         COPYRIGHT
+    ========================= -->
+
+    <div class="footer-bottom">
+
+        <p>
+            &copy; 2026 Social Bean Coffee. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Your JavaScript -->
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+<script>
+
+const schedule = {
+    0: { openHour: 8, openMinute: 30, closeHour: 15, closeMinute: 30 },   // Sunday
+    1: { openHour: 7, openMinute: 30, closeHour: 15, closeMinute: 0 },   // Monday
+    2: { openHour: 7, openMinute: 30, closeHour: 15, closeMinute: 0 },   // Tuesday
+    3: { openHour: 7, openMinute: 30, closeHour: 15, closeMinute: 0 },   // Wednesday
+    4: { openHour: 7, openMinute: 30, closeHour: 15, closeMinute: 0 },   // Thursday
+    5: { openHour: 7, openMinute: 30, closeHour: 15, closeMinute: 0 },   // Friday
+    6: { openHour: 8, openMinute: 30, closeHour: 15, closeMinute: 30 }   // Saturday
+};
+
+const dayNames = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+];
+
+function formatTime(hour, minute) {
+
+    const period = hour >= 12 ? "PM" : "AM";
+    let displayHour = hour % 12;
+
+    if (displayHour === 0) displayHour = 12;
+
+    return `${displayHour}:${minute.toString().padStart(2, "0")} ${period}`;
+}
+
+function checkStatus() {
+
+    const now = new Date();
+
+    const day = now.getDay();
+    const currentMinutes = now.getHours() * 60 + now.getMinutes();
+
+    const today = schedule[day];
+    const status = document.getElementById("footer-status");
+
+    const openMinutes = today.openHour * 60 + today.openMinute;
+    const closeMinutes = today.closeHour * 60 + today.closeMinute;
+
+    if (currentMinutes < openMinutes) {
+
+        status.innerHTML = `Sorry, we are closed.<br>Opens today at ${formatTime(today.openHour, today.openMinute)}`;
+        status.style.color = "red";
+        return;
+    }
+
+    if (currentMinutes >= openMinutes && currentMinutes < closeMinutes) {
+
+        status.innerHTML = "We are open! Come and Visit.";
+        status.style.color = "green";
+        return;
+    }
+
+    for (let i = 1; i <= 7; i++) {
+
+        const nextDay = (day + i) % 7;
+
+        if (schedule[nextDay]) {
+
+            const next = schedule[nextDay];
+
+            status.innerHTML = `Sorry, we are closed.<br>Opens ${dayNames[nextDay]} at ${formatTime(next.openHour, next.openMinute)}`;
+
+            status.style.color = "#FF0000";
+            return;
+        }
+    }
+}
+
+checkStatus();
+
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>
