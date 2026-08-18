@@ -116,7 +116,7 @@ a {
     line-height:.8;
     font-weight:450;
 
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 
 .description {
@@ -125,7 +125,7 @@ a {
 
     font-size: 15px;
     line-height: 1.7;
-    margin: 0;
+    margin-top:20px;
 }
 
 /* IMAGE */
@@ -143,16 +143,42 @@ a {
     border-radius: 10px;
 }
 
+/* =========================
+   PHONE FOUNDERS IMAGE
+========================= */
 
+.founders-phone-image {
+    display: none;
+}
 
 /* PHONE */
 @media (max-width: 767px) {
     .founders-image {
         margin-top: 40px;
+        display: none;
     }
+
+    .founders-phone-image {
+        display: block;
+
+        width: 100%;
+
+        margin: 35px 0;
+    }
+
 
     .founders-image img {
         height: 400px;
+    }
+
+    .founders-phone-image img {
+        width: 100%;
+        height: 300px;
+
+        object-fit: cover;
+
+        border-radius: 10px;
+        display: block;
     }
 
     .founders h1 {
@@ -870,12 +896,21 @@ SECTION 4 — SOCIAL
     display: none;
 }
 
+.sidebar-logo {
+    display: none;
+}
 
+
+.mobile-nav-buttons {
+    display: none;
+}
 /* =========================
-   MOBILE
+   MOBILE NAVBAR
 ========================= */
+
 @media (max-width: 768px) {
 
+    /* TOP NAVBAR */
     .navbar {
         width: 100%;
         height: 75px;
@@ -892,10 +927,43 @@ SECTION 4 — SOCIAL
 
 
     /* =========================
-       HAMBURGER — LEFT
+       LOGO — LEFT
+    ========================= */
+
+    .brand {
+        order: 1;
+
+        display: flex;
+        align-items: center;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-logo {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-logo img {
+        width: 55px;
+        height: 55px;
+
+        border-radius: 50%;
+        border: 1px solid white;
+
+        display: block;
+        object-fit: cover;
+    }
+
+
+    /* =========================
+       HAMBURGER — RIGHT
     ========================= */
 
     .menu-btn {
+        order: 2;
+
         display: block;
 
         font-size: 30px;
@@ -906,54 +974,19 @@ SECTION 4 — SOCIAL
         cursor: pointer;
 
         z-index: 1002;
-
-        order: 1;
     }
 
 
     /* =========================
-       LOGO — RIGHT
-    ========================= */
-
-    .brand {
-        display: flex;
-        align-items: center;
-
-        margin: 0;
-
-        order: 2;
-    }
-
-    .nav-logo {
-        display: flex;
-        align-items: center;
-
-        margin: 0;
-        padding: 0;
-    }
-
-    .nav-logo img {
-        width: 50px;
-        height: 50px;
-
-        border-radius: 50%;
-        border: 1px solid white;
-
-        display: block;
-
-        object-fit: cover;
-    }
-
-
-    /* =========================
-       SIDEBAR
+       SIDEBAR — SLIDES FROM LEFT
     ========================= */
 
     .nav-links {
         position: fixed;
 
         top: 0;
-        left: -280px;
+        right: 0;
+        left: auto;
 
         width: 280px;
         height: 100vh;
@@ -962,19 +995,19 @@ SECTION 4 — SOCIAL
 
         display: flex;
         flex-direction: column;
-
         align-items: center;
-        justify-content: flex-start;
 
         gap: 30px;
 
-        padding: 100px 20px 30px;
+        padding: 30px 20px;
 
         margin: 0;
 
-        transform: none;
+        list-style: none;
 
-        transition: left 0.3s ease;
+        transform: translateX(100%);
+
+        transition: transform 0.3s ease;
 
         z-index: 1000;
     }
@@ -983,25 +1016,106 @@ SECTION 4 — SOCIAL
     /* SIDEBAR OPEN */
 
     .nav-links.active {
-        left: 0;
+        transform: translateX(0);
     }
 
 
-    /* HIDE DESKTOP FIND US */
+    /* =========================
+       SIDEBAR LOGO
+    ========================= */
 
-    .desktop-find {
-        display: none;
+    .nav-links::before {
+        content: "";
+
+        width: 65px;
+        height: 65px;
+
+        background-image: url("../images/logo.jpg");
+        background-size: cover;
+        background-position: center;
+
+        border-radius: 50%;
+        border: 1px solid white;
+
+        margin-bottom: 15px;
     }
 
 
-    /* SHOW MOBILE FIND US */
+        /* =========================
+        SIDEBAR LINKS
+        ========================= */
 
-    .nav-links li.mobile-find {
-        display: block;
+        .nav-links li {
+            width: 100%;
+            text-align: center;
+        }
+
+        .nav-links a {
+            color: white;
+            font-size: 15px;
+        }
+
+
+        /* =========================
+        FIND US
+        ========================= */
+
+        .desktop-find {
+            display: none;
+        }
+
+        .nav-links li.mobile-find {
+            display: block;
+        }
+
+        /* =========================
+    RIGHT SIDE BUTTONS
+    ========================= */
+
+    .mobile-nav-buttons {
+        display: flex;
+
+        align-items: center;
+
+        gap: 18px;
+
+        order: 2;
     }
+
+
+    /* =========================
+    LOCATION PIN
+    ========================= */
+
+    .location-btn {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        color: white;
+
+        text-decoration: none;
+
+        font-size: 25px;
+
+        width: 35px;
+        height: 35px;
+
+        transition: 0.3s ease;
+    }
+
+    .location-btn:hover {
+        color: #669cc0;
+    }
+
+
+/* =========================
+   HAMBURGER
+========================= */
+
 
 }
-
 /* =========================================================
    FOOTER
 ========================================================= */
