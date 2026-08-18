@@ -874,53 +874,80 @@ SECTION 4 — SOCIAL
 /* =========================
    MOBILE
 ========================= */
-
 @media (max-width: 768px) {
 
     .navbar {
+        width: 100%;
         height: 75px;
 
-        justify-content: flex-start;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-        padding: 15px 20px;
+        padding: 10px 20px;
 
         position: relative;
         z-index: 1001;
     }
 
 
-    /* HAMBURGER */
+    /* =========================
+       HAMBURGER — LEFT
+    ========================= */
 
     .menu-btn {
         display: block;
 
-        color: white;
-
         font-size: 30px;
-
         line-height: 1;
+
+        color: white;
 
         cursor: pointer;
 
         z-index: 1002;
 
-        user-select: none;
+        order: 1;
     }
 
 
-    /* LOGO */
+    /* =========================
+       LOGO — RIGHT
+    ========================= */
+
+    .brand {
+        display: flex;
+        align-items: center;
+
+        margin: 0;
+
+        order: 2;
+    }
 
     .nav-logo {
-        margin-left: 15px;
+        display: flex;
+        align-items: center;
+
+        margin: 0;
+        padding: 0;
     }
 
     .nav-logo img {
         width: 50px;
         height: 50px;
+
+        border-radius: 50%;
+        border: 1px solid white;
+
+        display: block;
+
+        object-fit: cover;
     }
 
 
-    /* SIDEBAR */
+    /* =========================
+       SIDEBAR
+    ========================= */
 
     .nav-links {
         position: fixed;
@@ -934,11 +961,9 @@ SECTION 4 — SOCIAL
         background: #af3302;
 
         display: flex;
-
         flex-direction: column;
 
         align-items: center;
-
         justify-content: flex-start;
 
         gap: 30px;
@@ -962,38 +987,19 @@ SECTION 4 — SOCIAL
     }
 
 
-    /* SIDEBAR ITEMS */
-
-    .nav-links li {
-        width: 100%;
-
-        text-align: center;
-    }
-
-    .nav-links a {
-        display: inline-block;
-
-        color: white;
-
-        font-size: 16px;
-    }
-
-
-    /* FIND US */
+    /* HIDE DESKTOP FIND US */
 
     .desktop-find {
         display: none;
     }
 
+
+    /* SHOW MOBILE FIND US */
+
     .nav-links li.mobile-find {
         display: block;
     }
 
-    .mobile-find .find-btn {
-        display: inline-block;
-
-        margin-top: 10px;
-    }
 }
 
 /* =========================================================
