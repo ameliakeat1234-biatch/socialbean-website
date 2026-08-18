@@ -689,27 +689,34 @@ SECTION 4 — SOCIAL
 }
 
 
-
 /* =========================
-   Navbar (Desktop)
+   NAVBAR
 ========================= */
 
- 
-.navbar{
+.navbar {
     width: 100%;
+    height: 80px;
+
     font-family: "Montserrat", sans-serif;
     font-size: small;
-    background:#e94505;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 30px;
-    position:relative;
-    border-bottom: 1px solid #ffffff;
+
+    background: #e94505;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 30px;
+
+    position: relative;
+    z-index: 1001;
+
+    border-bottom: 1px solid white;
 }
 
+
 /* =========================
-   LOGO + BRAND NAME
+   BRAND
 ========================= */
 
 .brand {
@@ -723,64 +730,46 @@ SECTION 4 — SOCIAL
     flex-shrink: 0;
 }
 
-
 .nav-logo {
-
     display: flex;
     align-items: center;
-
-    text-decoration: none;
 
     margin: 0;
     padding: 0;
 }
 
-/* LOGO IMAGE */
-
 .nav-logo img {
     width: 55px;
-    height: auto;
+    height: 55px;
+
     border-radius: 50%;
-    border: solid 1px white;
+    border: 1px solid white;
 
     display: block;
 
-    object-fit: contain;
+    object-fit: cover;
 }
 
-/* REMOVE LINK EFFECTS */
 
-.nav-logo:hover {
-    text-decoration: none;
-}
+/* =========================
+   NAV LINKS
+========================= */
 
-.brand{
-    font-family:"Montserrat", sans-serif;
-    color:white;
-    font-size:large;
-    font-weight:500;
-
-    display: flex;
-    align-items: center;
-
-    gap: 12px;
-
-    text-decoration: none;
-
-    flex-shrink: 0;
-}
-
-.nav-links{
+.nav-links {
     position: absolute;
 
     left: 50%;
     transform: translateX(-50%);
-    list-style:none;
+
+    list-style: none;
+
+    display: flex;
     align-items: center;
-    display:flex;
-    gap:40px;
-    margin:0;
-    padding:0;
+
+    gap: 40px;
+
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li {
@@ -788,180 +777,224 @@ SECTION 4 — SOCIAL
     padding: 0;
 }
 
-.nav-links a{
-    text-decoration:none;
-    color:white;
-    font-weight:600;
-    position:relative;
-    transition:color .3s;
-}
-
-/* Underline animation */
-
-.nav-links a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-5px;
-    width:0;
-    height:2px;
-    background:#669cc0;
-    transition: width .3s ease;
-}
-
-.nav-links a:hover{
-    color:#669cc0;
-}
-
-.nav-links a:hover::after{
-    width:100%;
-}
-
-/* Find Us button */
-
-.find-btn {
-    display: inline-block;
-
+.nav-links a {
     text-decoration: none;
 
     color: white;
 
-    padding: 10px 20px;
-
-    border: 1px solid white;
-    border-radius: 20px;
-
-    font-family: "Montserrat", sans-serif;
-    font-size: small;
     font-weight: 600;
 
-    transition: all 0.3s ease;
+    position: relative;
+
+    transition: color 0.3s;
 }
 
-.find-btn:hover {
-    background: #e94505;
-    color: white;
-}
-/* Desktop */
 
-.menu-btn{
-    color: white;
-    display:none;
-}
+/* UNDERLINE */
 
-.desktop-find{
-    display:inline-block;
-    margin-left: auto;
-}
+.nav-links a::after {
+    content: "";
 
-/* Hide mobile Find Us on desktop */
-.nav-links li.mobile-find{
-    display:none;
+    position: absolute;
+
+    left: 0;
+    bottom: -5px;
+
+    width: 0;
+    height: 2px;
+
+    background: #669cc0;
+
+    transition: width 0.3s ease;
 }
 
-/* =========================
-   Mobile
-========================= */
+.nav-links a:hover {
+    color: #669cc0;
+}
 
-@media (max-width:768px){
-
-    .navbar{
-        justify-content:flex-start;
-        padding:15px 20px;
-    }
-
-    .menu-btn{
-        display:block;
-        font-size:30px;
-        color:white;
-        cursor:pointer;
-        z-index:1001;
-    }
-
-    .find-btn {
-        padding: 9px 18px;
-        font-size: 12px;
-        border-radius: 18px;
-        color: #ea672d !important;
-        border: 1px solid #e94505 !important;
-    }
-
-    .find-btn:hover {
-        background: #e94505 !important;
-        color: white !important;
-    }
-
-    .nav-logo{
-        margin-left:15px;
-    }
-
-    .nav-links{
-        position:fixed;
-        top:0;
-        left:-250px;
-        width:250px;
-        height:100vh;
-        background:#af3302;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:flex-start;
-        gap:30px;
-        padding-top:80px;
-        transition:left .3s ease;
-        z-index:1000;
-    }
-
-    .nav-links.active{
-        left:0;
-    }
-
-    /* Hide desktop button */
-    .desktop-find{
-        display:none;
-    }
-
-    /* Show mobile button inside menu */
-    .nav-links li.mobile-find{
-        display:block;
-    }
-
-    .mobile-find .find-btn{
-        display:inline-block;
-        margin-top:10px;
-    }
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 
 /* =========================
-   FIND US BUTTON — OVERRIDE
+   FIND US
 ========================= */
 
 .find-btn {
+    display: inline-block;
+
     text-decoration: none !important;
+
     color: white !important;
-    border: 1px solid white !important;
+
     padding: 10px 20px;
+
+    border: 1px solid white !important;
+
     border-radius: 20px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: small;
+
     font-weight: 600;
-    position: relative;
+
     transition: 0.3s ease;
 }
 
-/* REMOVE NAV LINK UNDERLINE */
 .find-btn::after {
     display: none !important;
 }
 
-/* FIND US HOVER */
 .find-btn:hover {
     background: white !important;
     color: #e94505 !important;
-    border-color: #e94505 !important;
 }
 
 
+/* =========================
+   DESKTOP
+========================= */
 
+.menu-btn {
+    display: none;
+}
+
+.desktop-find {
+    display: inline-block;
+    margin-left: auto;
+}
+
+.nav-links li.mobile-find {
+    display: none;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        height: 75px;
+
+        justify-content: flex-start;
+
+        padding: 15px 20px;
+
+        position: relative;
+        z-index: 1001;
+    }
+
+
+    /* HAMBURGER */
+
+    .menu-btn {
+        display: block;
+
+        color: white;
+
+        font-size: 30px;
+
+        line-height: 1;
+
+        cursor: pointer;
+
+        z-index: 1002;
+
+        user-select: none;
+    }
+
+
+    /* LOGO */
+
+    .nav-logo {
+        margin-left: 15px;
+    }
+
+    .nav-logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    /* SIDEBAR */
+
+    .nav-links {
+        position: fixed;
+
+        top: 0;
+        left: -280px;
+
+        width: 280px;
+        height: 100vh;
+
+        background: #af3302;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        gap: 30px;
+
+        padding: 100px 20px 30px;
+
+        margin: 0;
+
+        transform: none;
+
+        transition: left 0.3s ease;
+
+        z-index: 1000;
+    }
+
+
+    /* SIDEBAR OPEN */
+
+    .nav-links.active {
+        left: 0;
+    }
+
+
+    /* SIDEBAR ITEMS */
+
+    .nav-links li {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: inline-block;
+
+        color: white;
+
+        font-size: 16px;
+    }
+
+
+    /* FIND US */
+
+    .desktop-find {
+        display: none;
+    }
+
+    .nav-links li.mobile-find {
+        display: block;
+    }
+
+    .mobile-find .find-btn {
+        display: inline-block;
+
+        margin-top: 10px;
+    }
+}
 
 /* =========================================================
    FOOTER
