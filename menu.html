@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Bean Coffee</title>
+    <title>Social Bean Coffee - Menu</title>
     
 
     <!-- Bootstrap CSS -->
@@ -14,23 +14,33 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/format-styles.css">
 </head>
-
 <!-- Header Carousel -->
 
 <body>
 
     <!-- Navigation -->
-     
+
+
 <nav class="navbar">
+
     <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
-    <h1 class="nav-logo">Social Bean</h1>
+    <!-- CLICKABLE COMPANY LOGO -->
+    <a href="index.html" class="brand">
+
+        <div class="nav-logo">
+            <img src="images/logo.jpg" alt="Social Bean Coffee">
+        </div>
+
+        <!--<span class="brand-name">Social Bean</span>-->
+
+    </a>
 
     <ul class="nav-links" id="menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="menu.html">Menu</a></li>
         <li><a href="beans.html">Our Beans</a></li>
-        <li><a href="#giftcards">Gift Cards</a></li>
+        <li><a href="https://app.squareup.com/gift/ML3B64FFRQSQ2/order">Gift Cards</a></li>
 
         <!-- Mobile only -->
         <li class="mobile-find">
@@ -38,9 +48,11 @@
         </li>
     </ul>
 
-
     <!-- Desktop only -->
-    <a href="findus.html" class="find-btn desktop-find">Find Us</a>
+    <a href="findus.html" class="find-btn desktop-find">
+        Find Us
+    </a>
+
 </nav>
 
 
@@ -350,7 +362,78 @@
 
     </section>
 
+<!-- =========================
+     MOVING DRINK IMAGES
+========================= -->
 
+<section class="drink-image-strip">
+
+    <div class="drink-image-track">
+
+        <!-- SET 1 -->
+        <div class="drink-image">
+            <img src="images/acai_bowl1.JPG" alt="Peanut Acai">
+        </div>
+
+        <div class="drink-image">
+            <img src="images/acai_bowl2.png" alt="Acai Bowl">
+        </div>
+
+        <div class="drink-image">
+            <img src="images/combo.jpg" alt="Pastry & Coffee">
+        </div>
+
+        <div class="drink-image">
+            <img src="images/matcha.jpg" alt="Matcha">
+        </div>
+
+        <div class="drink-image">
+            <img src="images/toastie.jpg" alt="Toastie">
+        </div>
+
+        <div class="drink-image">
+            <img src="images/toastie2.jpg" alt="Ham & Cheese">
+        </div>
+
+        <div class="drink-image">
+            <img src="images/coffee_pour.jpg" alt="Coffee">
+        </div>
+
+
+        <!-- SET 2 — DUPLICATE FOR SEAMLESS LOOP -->
+
+        <div class="drink-image">
+            <img src="images/acai_bowl1.JPG" alt="Peanut Acai">
+        </div>
+
+        <div class="drink-image">
+            <img src="images/acai_bowl2.png" alt="Acai Bowl">
+        </div>
+
+
+        <div class="drink-image">
+            <img src="images/combo.jpg" alt="Pastry & Coffee">
+        </div>
+
+        <div class="drink-image">
+            <img src="images/matcha.jpg" alt="Matcha">
+        </div>
+
+        <div class="drink-image">
+            <img src="images/toastie.jpg" alt="Toastie">
+        </div>
+
+        <div class="drink-image">
+            <img src="images/toastie2.jpg" alt="Ham & Cheese">
+        </div>
+
+        <div class="drink-image">
+            <img src="images/coffee_pour.jpg" alt="Coffee">
+        </div>
+
+    </div>
+
+</section>
 
 <!-- =========================
      SECTION 2 — FOOD MENU
@@ -569,22 +652,25 @@
 
                     <h2>SOUL FOOD<br>PRODUCTS</h2>
 
+                <div class="menu-list"></div>
 
-                    <div class="menu-list">
-
+                <div class="menu-list-heading">
+                    <span>OVERNIGHT OATS</span>
+                    <span>REG / LARGE</span>
+                </div>
                         <div class="menu-item">
-                            <span>Biscoff</span>
-                            <span>€—</span>
+                            <span>Biscuit Baby</span>
+                            <span>€4.50 / 5.50</span>
                         </div>
 
                         <div class="menu-item">
-                            <span>Product Two</span>
-                            <span>€—</span>
+                            <span>Peanut Butter & Chocolate</span>
+                            <span>€4.50 / 5.50</span>
                         </div>
 
                         <div class="menu-item">
-                            <span>Product Three</span>
-                            <span>€—</span>
+                            <span>Pistachio & White Chocolate</span>
+                            <span>€4.50 / 5.50</span>
                         </div>
 
                     </div>
@@ -697,7 +783,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="beans.html">Our Beans</a></li>
-                <li><a href="#giftcards">Gift Cards</a></li>
+                <li><a href="https://app.squareup.com/gift/ML3B64FFRQSQ2/order">Gift Cards</a></li>
                 <li><a href="findus.html">Find Us</a></li>
             </ul>
 
