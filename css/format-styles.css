@@ -16,6 +16,7 @@ body{
     color:#463F3A;
 }
 
+
 /* =========================
    BANNER
 ========================= */
@@ -111,7 +112,7 @@ a {
 .founders h1 {
     color: #e94505;
     font-family: "Montserrat", sans-serif;
-    font-size:80px;
+    font-size:90px;
     line-height:.8;
     font-weight:450;
 
@@ -122,7 +123,7 @@ a {
     font-family: "Montserrat", sans-serif;
     max-width: 450px;
 
-    font-size: 17px;
+    font-size: 15px;
     line-height: 1.7;
     margin: 0;
 }
@@ -695,6 +696,7 @@ SECTION 4 — SOCIAL
 
  
 .navbar{
+    width: 100%;
     font-family: "Montserrat", sans-serif;
     font-size: small;
     background:#e94505;
@@ -706,24 +708,84 @@ SECTION 4 — SOCIAL
     border-bottom: 1px solid #ffffff;
 }
 
-.nav-logo{
+/* =========================
+   LOGO + BRAND NAME
+========================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+}
+
+
+.nav-logo {
+
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* LOGO IMAGE */
+
+.nav-logo img {
+    width: 55px;
+    height: auto;
+    border-radius: 50%;
+    border: solid 1px white;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+/* REMOVE LINK EFFECTS */
+
+.nav-logo:hover {
+    text-decoration: none;
+}
+
+.brand{
     font-family:"Montserrat", sans-serif;
     color:white;
-    margin:0;
     font-size:large;
-    font-weight:350;
+    font-weight:500;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
 }
 
 .nav-links{
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
     list-style:none;
+    align-items: center;
     display:flex;
     gap:40px;
     margin:0;
     padding:0;
 }
 
-.nav-links li{
-    display:inline-block;
+.nav-links li {
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a{
@@ -789,6 +851,7 @@ SECTION 4 — SOCIAL
 
 .desktop-find{
     display:inline-block;
+    margin-left: auto;
 }
 
 /* Hide mobile Find Us on desktop */
@@ -896,6 +959,9 @@ SECTION 4 — SOCIAL
     color: #e94505 !important;
     border-color: #e94505 !important;
 }
+
+
+
 
 /* =========================================================
    FOOTER
