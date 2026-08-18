@@ -741,7 +741,7 @@ html{
 
 }
 
-
+/*coffee beans */
 
 .coffee {
     background-color:#fbf8ddb2;
@@ -778,15 +778,16 @@ html{
 
 .coffee-image {
     width: 100%;
-    height: auto;
-    min-height: 0;
+    max-width: 600px;
+
+    margin-left: auto;
 }
 
 .coffee-image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     border: solid 2px #ffffff;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 5px;
     display: block;
 }
@@ -795,12 +796,25 @@ html{
 
 /* PHONE */
 @media (max-width: 767px) {
+    .coffee {
+        padding: 60px 20px;
+    }
+
     .coffee-image {
+        width: 100%;
+        max-width: 100%;
+
         margin-top: 40px;
     }
 
     .coffee-image img {
-        height: 400px;
+        width: 100%;
+        height: auto;
+
+        border: 2px solid white;
+        border-radius: 10px;
+
+        object-fit: cover;
     }
 
     .coffee h1 {
