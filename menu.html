@@ -436,6 +436,20 @@
 </section>
 
 <!-- =========================
+     IMAGE VIEWER
+========================= -->
+
+<div class="image-modal" id="imageModal">
+
+    <span class="image-modal-close" id="imageModalClose">
+        &times;
+    </span>
+
+    <img id="modalImage" src="" alt="">
+
+</div>
+
+<!-- =========================
      SECTION 2 — FOOD MENU
 ========================= -->
 
@@ -894,6 +908,82 @@
 function toggleMenu() {
     document.getElementById("menu").classList.toggle("active");
 }
+</script>
+<script>
+
+const drinkImages = document.querySelectorAll(".drink-image img");
+
+const imageModal = document.getElementById("imageModal");
+const modalImage = document.getElementById("modalImage");
+const imageModalClose = document.getElementById("imageModalClose");
+
+
+/* =========================
+   OPEN IMAGE
+========================= */
+
+drinkImages.forEach(function(image) {
+
+    image.addEventListener("click", function() {
+
+        modalImage.src = this.src;
+        modalImage.alt = this.alt;
+
+        imageModal.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+});
+
+
+/* =========================
+   CLOSE IMAGE
+========================= */
+
+imageModalClose.addEventListener("click", function() {
+
+    imageModal.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+});
+
+
+/* =========================
+   CLICK OUTSIDE IMAGE
+========================= */
+
+imageModal.addEventListener("click", function(event) {
+
+    if (event.target === imageModal) {
+
+        imageModal.classList.remove("active");
+
+        document.body.style.overflow = "";
+
+    }
+
+});
+
+
+/* =========================
+   ESC KEY
+========================= */
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+
+        imageModal.classList.remove("active");
+
+        document.body.style.overflow = "";
+
+    }
+
+});
+
 </script>
 <script>
 
